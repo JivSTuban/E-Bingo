@@ -1,71 +1,65 @@
-# Bingo Card App
+1. PlayerDashboard.jsx
+Purpose: I use this component to display Bingo cards based on the entered game code, allowing users to check if a card is a winning card.
 
-This app allows players to join a Bingo game using a game code, fetch multiple Bingo cards, and check if a card is a winning card.
+Dependencies:
+- react
+- react-router-dom
+- axios
+- @mui/material
 
-## How to Use
+Installation: You can install the necessary packages using:
+npm install react react-router-dom axios @mui/material
 
-1. **Enter Game Code**: On the home page, enter the game code and click "Enter Game".
-2. **View Bingo Cards**: The app will fetch and display Bingo cards for the entered game code.
-3. **Check Win**: Click the "Check Win" button on each card to check if it is a winning card.
-4. **Get Another Card**: Click the "Get Another Card" button to fetch a new Bingo card.
+Usage:
+- Import the Component: I import PlayerDashboard into my project.
+- Use it within a Route: I define a route in my routing configuration that points to PlayerDashboard. This component expects a gameCode parameter from the URL.
+- Ensure Routing Context: I make sure my application is wrapped in a BrowserRouter to enable routing.
 
-## Available Scripts
+2. App.jsx
+Purpose: This is my entry point where I can enter a game code to join a Bingo game.
 
-In the project directory, you can run:
+Dependencies:
+- react
+- @mui/material
+- react-router-dom
 
-### `npm install`
+Usage:
+- Import the Component: I import App into my project.
+- Use it as a Main Component: I can use this component as the main component for my home route.
+- Ensure Routing Context: I ensure my application is wrapped in a BrowserRouter to enable routing.
 
-Installs the dependencies.
+3. main.jsx
+Purpose: This is the entry point of my application, where I set up the React app with routing.
 
-### `npm run dev`
+Dependencies:
+- react
+- react-dom
+- react-router-dom
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Usage:
+- Import Necessary Modules: I import StrictMode, createRoot, BrowserRouter, and my routing configuration (e.g., AppRoutes).
+- Render the Application: I use createRoot to render my application wrapped in StrictMode and BrowserRouter.
 
-### `npm run build`
+4. Dashboard.jsx
+Purpose: This component fetches and displays the game board for a specific game code.
 
-Builds the app for production to the `build` folder.
+Dependencies:
+- react
+- axios
 
-### `npm run lint`
+Usage:
+- Import the Component: I import Dashboard into my project.
+- Use it within a Route or Component: I can use this component within a route or another component to display the game board.
+- Ensure API Endpoint: I make sure the API endpoint used in the component matches my requirements.
 
-Lints the codebase using ESLint.
+5. routes.jsx
+Purpose: This file defines the routes for my application.
 
-## Project Structure
+Dependencies:
+- react
+- react-router-dom
 
-- **src/App.jsx**: The main component where users enter the game code.
-- **src/PlayerDashboard.jsx**: The component that displays Bingo cards and allows users to check for wins.
-- **src/routes.jsx**: Defines the routes for the application.
-- **src/main.jsx**: The entry point of the application.
-- **src/index.css**: Global CSS styles for the application.
-- **src/App.css**: CSS styles specific to the App component.
-
-## Detailed Explanation
-
-### App.jsx
-
-This component renders a form where users can enter a game code and join a game.
-
-### PlayerDashboard.jsx
-
-This component fetches and displays Bingo cards for the entered game code. It also allows users to check if a card is a winning card and fetch new cards.
-
-### routes.jsx
-
-Defines the routes for the application. It includes the home route (`/`) and the player dashboard route (`/bingo/play/:gameCode`).
-
-### main.jsx
-
-The entry point of the application. It sets up the React application with routing.
-
-### index.css
-
-Global CSS styles for the application.
-
-### App.css
-
-CSS styles specific to the App component.
-
-## Example Usage
-
-1. **Start the Development Server**:
-   ```sh
-   npm run dev
+Usage:
+- Import Necessary Modules: I import Routes, Route, and my components (e.g., App, PlayerDashboard).
+- Define Routes: I use the Routes and Route components to define the paths and corresponding components.
+- Use in Main Entry Point: I import and use this routing configuration in my main entry point (e.g., main.jsx).
